@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FSA Digital</title>
+    <link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos adicionais para os cards clicáveis */
+        .servicos-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .servicos-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .servicos-card::after {
+            content: "→";
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .servicos-card:hover::after {
+            opacity: 1;
+        }
+
+        .servicos-card a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+            z-index: 1;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#servicos" class="menu-link">Soluções</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./IMG/LOGO.jpg" alt="Logo FSA Digital" class="LogoFSA">
+        <h1>FSA DIGITAL</h1>
+        <p class="cabecalho-intro">
+            Desenvolvemos <strong>soluções digitais, sistemas e aplicações com Inteligência Artificial</strong>
+            para empresas e profissionais que querem
+            <strong>automatizar processos, crescer com dados e tomar decisões financeiras mais inteligentes</strong>.
+        </p>
+    </main>
+    <section class="video-hero">
+        <h2 class="video-hero">
+            <video src="./IMG/video/fsa_digital.mp4.mp4" controls width="800" muted autoplay>
+                <source src="IMG/video/fsa_digital.mp4.h264" type="video">
+                <source src="IMG/video/fsa_digital.mp4.mp4" type="video">
+            </video>
+        </h2>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre a FSA</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                A FSA Digital é uma empresa de tecnologia e soluções digitais focada em
+                automação, inteligência artificial, marketing de performance e análise de
+                mercados financeiros. Atuamos com estratégia, dados e execução técnica.
+            </p>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <h2 class="servicos-titulo">Soluções da FSA Digital</h2>
+
+        <div class="servicos-caixa">
+
+            <div class="servicos-card destaque">
+                <!-- Link para landing page de Sistemas & IA -->
+                <a href="/SistemIA.html" aria-label="Saiba mais sobre Sistemas, Sites, Apps & IA"></a>
+                <div class="card-content">
+                    <img src="./IMG/Sistemas, Sites, Apps & IA.png" class="servicos-imagem" alt="Tecnologia e IA">
+                    <div class="caixa-textos-servicos">
+                        <h3 class="info-servicos">Sistemas, Sites, Apps & IA</h3>
+                        <p class="paragrafo-servicos">
+                            <span>Soluções digitais sob medida</span>
+                            <span>Sites profissionais e aplicações web</span>
+                            <span>Programação de sistemas internos</span>
+                            <span>Automação de processos e atendimento com IA</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="servicos-card">
+                <!-- Link para landing page de Marketing Digital -->
+                <a href="/MK Digital.html" aria-label="Saiba mais sobre Marketing Digital de Performance"></a>
+                <div class="card-content">
+                    <img src="./IMG/IA.jpg" class="servicos-imagem" alt="Marketing Digital">
+                    <div class="caixa-textos-servicos">
+                        <h3 class="info-servicos">Marketing Digital de Performance</h3>
+                        <p class="paragrafo-servicos">
+                            <strong>Crescimento orientado a dados</strong>
+                            <span>Gestão estratégica de redes sociais</span>
+                            <span>Tráfego pago focado em conversão</span>
+                            <span>Landing pages e funis B2B</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="servicos-card">
+                <!-- Link para landing page de Mercados Financeiros -->
+                <a href="/MF.html" aria-label="Saiba mais sobre Mercados Financeiros & Cripto"></a>
+                <div class="card-content">
+                    <img src="./IMG/Finanças.jpg" class="servicos-imagem" alt="Mercados Financeiros">
+                    <div class="caixa-textos-servicos">
+                        <h3 class="info-servicos">Mercados Financeiros & Cripto</h3>
+                        <p class="paragrafo-servicos">
+                            <strong>Educação e análise de mercado</strong>
+                            <span>Mercado financeiro, ações e criptoativos</span>
+                            <span>Análises, relatórios e estudos de risco</span>
+                            <span>Ferramentas e soluções financeiras digitais</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="servicos-card">
+                <!-- Link para landing page de Consultoria Digital -->
+                <a href="/Cosulturia.html" aria-label="Saiba mais sobre Consultoria Digital Estratégica"></a>
+                <div class="card-content">
+                    <img src="./IMG/Consultoria.jpg.png" class="servicos-imagem" alt="Consultoria Digital">
+                    <div class="caixa-textos-servicos">
+                        <h3 class="info-servicos">Consultoria Digital Estratégica</h3>
+                        <p class="paragrafo-servicos">
+                            <strong>Diagnóstico e planeamento tecnológico</strong>
+                            <span>Mapeamento de processos</span>
+                            <span>Estratégia digital e automação</span>
+                            <span>Apoio à tomada de decisão</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carrossel-controles">
+            <button class="btn-carrossel btn-anterior">←</button>
+            <button class="btn-carrossel btn-proximo">→</button>
+        </div>
+
+        <p class="nota-legal">
+            A FSA Digital atua com educação, análise e tecnologia aplicada.
+            Não realizamos gestão de capital nem oferecemos aconselhamento financeiro personalizado.
+        </p>
+    </section>
+
+    <section class="cta-investimentos">
+        <a href="/investimentos.html" class="btn-investimentos">
+            Investimentos & Cripto
+        </a>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Contato</h2>
+
+        <p class="contatos-titulo">
+            Descreva seu negócio e diga onde deseja ganhar eficiência ou automatizar processos.
+        </p>
+
+        <form class="formulario-contatos" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input type="text" placeholder="Nome" class="campo-form" id="nome" required>
+            </div>
+            <div class="grupo-form">
+                <textarea placeholder="Mensagem" class="campo-form" rows="5" id="mensagem" required></textarea>
+            </div>
+            <button class="botao-form">Solicitar diagnóstico gratuito</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '244941387131';
+            const texto = encodeURIComponent(`Olá, meu nome é ${nome}. ${mensagem}`);
+            window.open(`https://wa.me/${telefone}?text=${texto}`, '_blank');
+        }
+
+        // Adicionar efeito visual de clique nos cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.servicos-card');
+
+            cards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    // Se o clique não foi no link dentro do card
+                    if (!e.target.closest('a')) {
+                        const link = this.querySelector('a');
+                        if (link) {
+                            link.click();
+                        }
+                    }
+                });
+
+                // Efeito visual ao pressionar
+                card.addEventListener('mousedown',
+                    function () {
+                        this.style.transform = 'translateY(-2px) scale(0.99)';
+                    });
+
+                card.addEventListener('mouseup',
+                    function () {
+                        this.style.transform = 'translateY(-5px)';
+                    });
+
+                card.addEventListener('mouseleave',
+                    function () {
+                        this.style.transform = '';
+                    });
+            });
+        });
+    </script>
+
+    <footer class="rodape-simples">
+        <div class="container">
+            <div class="rodape-content">
+                <div class="rodape-texto">
+                    <h3>Pronto para Transformar seu Negócio?</h3>
+                    <p>Entre em contato e descubra como podemos ajudar você.</p>
+                </div>
+                <div class="rodape-botoes">
+                    <a href="contato.html" class="btn-rodape">
+                        📞 Falar com Especialista
+                    </a>
+                    <a href="mailto:contato@fsadigital.com.br" class="btn-rodape-secundario">
+                        📧 Enviar Email
+                    </a>
+                </div>
+            </div>
+            <div class="rodape-copyright">
+                <p>© 2025-2026 FSA Digital | <a href="contato.html">contato@fsadigital.com.br</a> | +244 941 387 131</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .rodape-simples {
+            background: linear-gradient(135deg, #0a0f1c, #0f172a);
+            padding: 3rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
+        }
+
+        .rodape-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+
+        .rodape-texto h3 {
+            color: var(--claro);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .rodape-texto p {
+            color: rgba(226, 232, 240, 0.8);
+        }
+
+        .rodape-botoes {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-rodape,
+        .btn-rodape-secundario {
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-rodape {
+            background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+            color: white;
+        }
+
+        .btn-rodape-secundario {
+            background: transparent;
+            color: var(--claro);
+            border: 2px solid var(--vidro);
+        }
+
+        .btn-rodape:hover,
+        .btn-rodape-secundario:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+
+        .rodape-copyright {
+            text-align: center;
+            color: rgba(226, 232, 240, 0.6);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .rodape-copyright a {
+            color: var(--secundaria);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .rodape-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rodape-botoes {
+                justify-content: center;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
+
+<script>function enviarWhats(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const telefone = '244941387131';
+    const texto = encodeURIComponent(`Olá, meu nome é ${nome}. ${mensagem}`);
+    window.open(`https://wa.me/${telefone}?text=${texto}`, '_blank');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Configurações
+    const BREAKPOINT = 1200;
+    let carousel = null;
+    
+    // Elementos
+    const carrossel = document.querySelector('.servicos-caixa');
+    const wrapper = document.querySelector('.carrossel-wrapper');
+    const btnAnterior = document.querySelector('.btn-anterior');
+    const btnProximo = document.querySelector('.btn-proximo');
+    
+    if (!carrossel) return;
+    
+    // Função para verificar tamanho da tela
+    function isMobileScreen() {
+        return window.innerWidth < BREAKPOINT;
+    }
+    
+    // Função para ativar o carrossel
+    function activateCarousel() {
+        // Se já está ativo, não fazer nada
+        if (carousel) return;
+        
+        // Duplicar os cards para efeito infinito
+        const cards = carrossel.querySelectorAll('.servicos-card');
+        const cardsArray = Array.from(cards);
+        
+        // Clonar para o final
+        cardsArray.forEach(card => {
+            const clone = card.cloneNode(true);
+            carrossel.appendChild(clone);
+        });
+        
+        // Clonar para o início
+        cardsArray.forEach(card => {
+            const clone = card.cloneNode(true);
+            carrossel.insertBefore(clone, carrossel.firstChild);
+        });
+        
+        // Estado do carrossel
+        let autoAtivo = true;
+        let isDragging = false;
+        let animationId = null;
+        let posicaoAtual = 0;
+        let ultimoTempo = null;
+        const velocidade = 50;
+        const cardWidth = 300 + 32;
+        const cardsOriginaisCount = cardsArray.length;
+        const larguraOriginais = cardWidth * cardsOriginaisCount;
+        
+        // Posicionar no primeiro card original
+        posicaoAtual = -larguraOriginais;
+        carrossel.style.transform = `translateX(${posicaoAtual}px)`;
+        
+        // Mostrar controles
+        if (btnAnterior && btnProximo) {
+            btnAnterior.style.display = 'flex';
+            btnProximo.style.display = 'flex';
+        }
+        
+        // Função para animação automática
+        function iniciarAnimacaoAuto() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+            
+            function animar(timestamp) {
+                if (!ultimoTempo) ultimoTempo = timestamp;
+                
+                const deltaTempo = timestamp - ultimoTempo;
+                ultimoTempo = timestamp;
+                
+                if (autoAtivo && !isDragging) {
+                    posicaoAtual -= (velocidade * deltaTempo) / 1000;
+                    
+                    // Limite para rolagem infinita
+                    const limiteEsquerda = -larguraOriginais * 2;
+                    
+                    if (posicaoAtual <= limiteEsquerda) {
+                        carrossel.style.transition = 'none';
+                        posicaoAtual = -larguraOriginais;
+                        carrossel.style.transform = `translateX(${posicaoAtual}px)`;
+                        carrossel.offsetHeight;
+                        carrossel.style.transition = 'transform 0.3s ease';
+                    }
+                    
+                    carrossel.style.transform = `translateX(${posicaoAtual}px)`;
+                }
+                
+                animationId = requestAnimationFrame(animar);
+            }
+            
+            animationId = requestAnimationFrame(animar);
+        }
+        
+        // Função para mover para uma posição
+        function moverParaPosicao(novaPosicao, usarTransicao = true) {
+            if (usarTransicao) {
+                carrossel.style.transition = 'transform 0.5s ease';
+            } else {
+                carrossel.style.transition = 'none';
+            }
+            
+            posicaoAtual = novaPosicao;
+            carrossel.style.transform = `translateX(${posicaoAtual}px)`;
+        }
+        
+        // Botão próximo
+        btnProximo.addEventListener('click', function() {
+            autoAtivo = false;
+            const novaPosicao = posicaoAtual - cardWidth;
+            moverParaPosicao(novaPosicao);
+            
+            setTimeout(() => {
+                autoAtivo = true;
+                ultimoTempo = null;
+            }, 5000);
+        });
+        
+        // Botão anterior
+        btnAnterior.addEventListener('click', function() {
+            autoAtivo = false;
+            const novaPosicao = posicaoAtual + cardWidth;
+            moverParaPosicao(novaPosicao);
+            
+            setTimeout(() => {
+                autoAtivo = true;
+                ultimoTempo = null;
+            }, 5000);
+        });
+        
+        // Arrastar
+        let startX = 0;
+        let startPos = 0;
+        
+        function iniciarArrastar(e) {
+            autoAtivo = false;
+            isDragging = true;
+            carrossel.style.cursor = 'grabbing';
+            carrossel.style.transition = 'none';
+            
+            const clientX = e.clientX || e.touches[0].clientX;
+            startX = clientX;
+            startPos = posicaoAtual;
+            
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        }
+        
+        function arrastar(e) {
+            if (!isDragging) return;
+            
+            const clientX = e.clientX || e.touches[0].clientX;
+            const deltaX = clientX - startX;
+            const novaPosicao = startPos + deltaX;
+            
+            posicaoAtual = novaPosicao;
+            carrossel.style.transform = `translateX(${posicaoAtual}px)`;
+        }
+        
+        function finalizarArrastar() {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            carrossel.style.cursor = 'grab';
+            carrossel.style.transition = 'transform 0.3s ease';
+            
+            // Arredondar para o card mais próximo
+            const cardIndex = Math.round(Math.abs(posicaoAtual) / cardWidth);
+            let novaPosicao = -cardIndex * cardWidth;
+            
+            const limiteEsquerda = -larguraOriginais * 2;
+            const limiteDireita = 0;
+            
+            if (novaPosicao <= limiteEsquerda) {
+                novaPosicao = -larguraOriginais;
+            } else if (novaPosicao >= limiteDireita) {
+                novaPosicao = limiteEsquerda + cardWidth;
+            }
+            
+            posicaoAtual = novaPosicao;
+            carrossel.style.transform = `translateX(${posicaoAtual}px)`;
+            
+            setTimeout(() => {
+                if (!isDragging) {
+                    autoAtivo = true;
+                    ultimoTempo = null;
+                    if (!animationId) {
+                        iniciarAnimacaoAuto();
+                    }
+                }
+            }, 3000);
+        }
+        
+        // Event listeners para arrastar
+        wrapper.addEventListener('mousedown', iniciarArrastar);
+        document.addEventListener('mousemove', arrastar);
+        document.addEventListener('mouseup', finalizarArrastar);
+        
+        wrapper.addEventListener('touchstart', function(e) {
+            iniciarArrastar(e.touches[0]);
+        });
+        
+        wrapper.addEventListener('touchmove', function(e) {
+            arrastar(e.touches[0]);
+        });
+        
+        wrapper.addEventListener('touchend', finalizarArrastar);
+        
+        wrapper.addEventListener('touchmove', function(e) {
+            if (isDragging) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        // Pausar ao passar o mouse
+        wrapper.addEventListener('mouseenter', () => {
+            autoAtivo = false;
+        });
+        
+        wrapper.addEventListener('mouseleave', () => {
+            if (!isDragging) {
+                autoAtivo = true;
+                ultimoTempo = null;
+            }
+        });
+        
+        // Iniciar animação
+        iniciarAnimacaoAuto();
+        
+        // Guardar estado
+        carousel = {
+            autoAtivo,
+            isDragging,
+            animationId,
+            posicaoAtual,
+            ultimoTempo,
+            velocidade,
+            cardWidth,
+            cardsOriginaisCount,
+            larguraOriginais,
+            iniciarAnimacaoAuto,
+            moverParaPosicao,
+            cardsArray
+        };
+    }
+    
+    // Função para desativar o carrossel
+    function deactivateCarousel() {
+        if (!carousel) return;
+        
+        // Parar animação
+        if (carousel.animationId) {
+            cancelAnimationFrame(carousel.animationId);
+        }
+        
+        // Remover clones
+        const cards = carrossel.querySelectorAll('.servicos-card');
+        const originalCount = carousel.cardsArray.length;
+        
+        // Manter apenas os originais
+        cards.forEach((card, index) => {
+            if (index >= originalCount) {
+                card.remove();
+            }
+        });
+        
+        // Resetar estilos
+        carrossel.style.transform = 'none';
+        carrossel.style.transition = 'none';
+        carrossel.style.cursor = 'default';
+        
+        // Esconder controles
+        if (btnAnterior && btnProximo) {
+            btnAnterior.style.display = 'none';
+            btnProximo.style.display = 'none';
+        }
+        
+        // Remover event listeners (precisaríamos ter guardado as referências, mas vamos recriar)
+        // Vamos recarregar os eventos quando reativar, então não há problema.
+        
+        carousel = null;
+    }
+    
+    // Verificar e ativar/desativar conforme o tamanho da tela
+    function checkScreen() {
+        if (isMobileScreen()) {
+            activateCarousel();
+        } else {
+            deactivateCarousel();
+        }
+    }
+    
+    // Verificar ao carregar
+    checkScreen();
+    
+    // Verificar ao redimensionar
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(checkScreen, 250);
+    });
+});
+</script>

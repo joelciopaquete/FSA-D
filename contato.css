@@ -1,0 +1,418 @@
+*
+
+.contato-page {
+    padding: 120px 20px 60px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--maisEscuro) 0%, var(--escuro) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.contato-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(79, 70, 229, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.contato-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos da página */
+.contato-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contato-page .subtitulo {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: rgba(226, 232, 240, 0.8);
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+/* Grid de opções de contato */
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Cards de contato */
+.contato-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.contato-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.contato-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+.contato-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contato-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--claro);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato-card h3::before {
+    font-size: 1.8rem;
+}
+
+.contato-email {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--secundaria);
+    margin: 15px 0;
+    padding: 10px 15px;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    transition: all 0.3s ease;
+    word-break: break-all;
+}
+
+.contato-email:hover {
+    background: rgba(124, 58, 237, 0.2);
+    transform: translateY(-2px);
+}
+
+.contato-card p {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botões específicos da página de contato */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+}
+
+.email-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.email-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.3);
+}
+
+/* Seção de horário de atendimento */
+.horario-atendimento {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+    border-radius: 20px;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.horario-atendimento h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--claro);
+}
+
+.horario-atendimento p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: rgba(226, 232, 240, 0.9);
+}
+
+.horario-note {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: rgba(226, 232, 240, 0.6);
+    font-style: italic;
+}
+
+/* Formulário de contato na página */
+.contato-form-page {
+    max-width: 600px;
+    margin: 40px auto 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+}
+
+.form-group-page {
+    margin-bottom: 25px;
+}
+
+.form-group-page label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--claro);
+    font-weight: 500;
+}
+
+.form-group-page .campo-form {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--vidro);
+    border-radius: 10px;
+    color: var(--claro);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group-page .campo-form:focus {
+    outline: none;
+    border-color: var(--secundaria);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form-group-page textarea.campo-form {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Botões de ação */
+.acoes-contato {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.botao-whatsapp {
+    flex: 1;
+    min-width: 200px;
+}
+
+.botao-email {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Mapa de localização (se adicionar) */
+.mapa-local {
+    margin-top: 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--vidro);
+}
+
+.mapa-local iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    display: block;
+}
+
+/* Responsividade específica para contato */
+@media (max-width: 768px) {
+    .contato-page {
+        padding: 100px 15px 40px;
+    }
+    
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contato-card {
+        padding: 25px;
+    }
+    
+    .contato-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contato-email {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+    
+    .whatsapp-btn,
+    .email-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+    
+    .horario-atendimento {
+        padding: 30px 20px;
+    }
+    
+    .contato-form-page {
+        padding: 25px;
+    }
+    
+    .acoes-contato {
+        flex-direction: column;
+    }
+    
+    .botao-whatsapp,
+    .botao-email {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contato-page {
+        padding: 90px 10px 30px;
+    }
+    
+    .contato-card {
+        padding: 20px;
+    }
+    
+    .contato-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contato-email {
+        font-size: 0.9rem;
+    }
+    
+    .contato-form-page {
+        padding: 20px;
+    }
+}
+
+/* Animações para entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contato-card,
+.horario-atendimento,
+.contato-form-page {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.contato-card:nth-child(1) { animation-delay: 0.1s; }
+.contato-card:nth-child(2) { animation-delay: 0.2s; }
+.contato-card:nth-child(3) { animation-delay: 0.3s; }
+.horario-atendimento { animation-delay: 0.4s; }
+.contato-form-page { animation-delay: 0.5s; }
+
+/* Ícones decorativos */
+.contato-card.email::before {
+    content: "✉️";
+}
+
+.contato-card.whatsapp::before {
+    content: "💬";
+}
+
+.contato-card.local::before {
+    content: "📍";
+}
+
+/* Efeito de brilho nos cards */
+.contato-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: transform 0.6s;
+    pointer-events: none;
+}
+
+.contato-card:hover::after {
+    transform: rotate(30deg) translate(20%, 20%);
+}

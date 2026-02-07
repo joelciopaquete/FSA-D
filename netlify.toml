@@ -1,0 +1,13 @@
+[build]
+  publish = "."                    # A pasta onde estão seus arquivos HTML
+
+[[redirects]]
+  from = "/*"
+  to = "/1FSADigital.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "JOY"
+    X-XSS-Protection = "1; mode=block"
