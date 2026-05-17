@@ -1,0 +1,14 @@
+# robots.txt - FSA Digital
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fsadigital.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Crawl delay
+Crawl-delay: 5
